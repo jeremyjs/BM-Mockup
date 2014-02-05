@@ -1,0 +1,372 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+		More info: h5bp.com/b/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>BoilerMake Hackathon</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="humans.txt">
+
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+	<!-- Facebook Metadata /-->
+	<meta property="fb:page_id" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content=""/>
+	<meta property="og:title" content=""/>
+
+	<!-- Google+ Metadata /-->
+	<meta itemprop="name" content="">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
+		However, there is a blank style.css in the css directory should you prefer -->
+	<link rel="stylesheet" href="css/gumby.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+  
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Nova+Flat' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="js/libs/Box2dWeb-2.1.a.3.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/libs/modernizr-2.6.2.min.js"></script>
+	<script type="text/javascript" src="js/libs/jcanvas.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.shuffleLetters.js"></script>
+	<script type="text/javascript" src="js/shuffle.js"></script>
+	<script type="text/javascript" src="js/physics.js"></script>
+	<script src="js/waypoints.js"></script>
+	<script src="js/waypoints-sticky.js"></script>
+	<script type="text/javascript" src="js/jquery.youtubeplaylist.js"></script>
+	<script type="text/ecmascript">
+		$(function() {
+			$("ul.gallery").ytplaylist({
+				addThumbs:true, 
+				autoPlay: false,
+				onChange: function() {
+					console.log('changed');
+				},
+				holderId: 'youtube'});
+		});
+	</script>
+
+</head>
+	<body onload="init();" id="top">
+		<section id="schedule">
+			<article>
+				<div class="row">
+					<div class="twelve columns">
+						<h2>The Schedule</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<div class="respond">
+							<a href="#"  class="toggle" gumby-trigger="#oct11">
+								<h4><i class="icon-arrow-combo"></i> Friday, October 11th</h4>
+							</a>
+							<div class="drawer active" id="oct11">
+								<span class="event">&nbsp;</span>
+								<span class="time">4am</span>
+								<span class="time">5</span>
+								<span class="time">6</span>
+								<span class="time">7</span>
+								<span class="time">8</span>
+								<span class="time">9</span>
+								<span class="time">10</span>
+								<span class="time">11</span>
+								<span class="time">12pm</span>
+								<span class="time">1</span>
+								<span class="time">2</span>
+								<span class="time">3</span>
+								<span class="time">4</span>
+								<span class="time">5</span>
+								<span class="time">6</span>
+								<span class="time">7</span>
+								<span class="time">8</span>
+								<span class="time">9</span>
+								<span class="time">10</span>
+								<span class="time">11</span>
+								<div class="slot">
+									<span class="event">Hacker Check-In</span>
+									<span class="during" style="left:800px;right:120px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Pizza/"Late	Night Snack"</span>
+									<span class="during" style="left:800px;right:80px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Opening	Ceremonies</span>
+									<span class="during" style="left:840px;right:80px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Hacking Kickoff</span>
+									<span class="during" style="left:880px;right:0px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="respond">
+							<a href="#"  class="toggle" gumby-trigger="#oct12">
+								<h4><i class="icon-arrow-combo"></i> Saturday, October 12th</h4>
+							</a>
+							<div class="drawer" id="oct12">
+								<span class="event">&nbsp;</span>
+								<span class="time">4am</span>
+								<span class="time">5</span>
+								<span class="time">6</span>
+								<span class="time">7</span>
+								<span class="time">8</span>
+								<span class="time">9</span>
+								<span class="time">10</span>
+								<span class="time">11</span>
+								<span class="time">12pm</span>
+								<span class="time">1</span>
+								<span class="time">2</span>
+								<span class="time">3</span>
+								<span class="time">4</span>
+								<span class="time">5</span>
+								<span class="time">6</span>
+								<span class="time">7</span>
+								<span class="time">8</span>
+								<span class="time">9</span>
+								<span class="time">10</span>
+								<span class="time">11</span>
+								<div class="slot">
+									<span class="event">Snack</span>
+									<span class="during" style="left:160px;right:760px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Breakout Session 1</span>
+									<span class="during" style="left:320px;right:600px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Breakout Session 2</span>
+									<span class="during" style="left:400px;right:520px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Breakout Session 3</span>
+									<span class="during" style="left:480px;right:440px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Breakout Session 4</span>
+									<span class="during" style="left:560px;right:0360px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Breakout Session 5</span>
+									<span class="during" style="left:640px;right:280px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Breakout Session 6</span>
+									<span class="during" style="left:720px;right:200px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="respond">
+							<a href="#"  class="toggle" gumby-trigger="#oct13">
+								<h4><i class="icon-arrow-combo"></i> Sunday, October 13th</h4>
+							</a>
+							<div class="drawer" id="oct13">
+								<span class="event">&nbsp;</span>
+								<span class="time">12am</span>
+								<span class="time">1</span>
+								<span class="time">2</span>
+								<span class="time">3</span>
+								<span class="time">4</span>
+								<span class="time">5</span>
+								<span class="time">6</span>
+								<span class="time">7</span>
+								<span class="time">8</span>
+								<span class="time">9</span>
+								<span class="time">10</span>
+								<span class="time">11</span>
+								<span class="time">12pm</span>
+								<span class="time">1</span>
+								<span class="time">2</span>
+								<span class="time">3</span>
+								<span class="time">4</span>
+								<span class="time">5</span>
+								<span class="time">6</span>
+								<span class="time">7</span>
+								<div class="slot">
+									<span class="event">Raffles</span>
+									<span class="during" style="left:200px;right:720px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Snack #2</span>
+									<span class="during" style="left:320px;right:600px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Deadline</span>
+									<span class="during" style="left:560px;right:3600px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Expo</span>
+									<span class="during" style="left:600px;right:280px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+								<div class="slot">
+									<span class="event">Closing Ceremonies</span>
+									<span class="during" style="left:700px;right:220px;"></span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+									<span class="time">&nbsp;</span><span class="time">&nbsp;</span>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#navigation').waypoint('sticky', {
+					offset: 0
+				});
+				
+				var intval = null;
+				var intvalT = null;
+				var pos = 0;
+
+				jQuery(document).ready(function() {
+					intval = window.setInterval(moveBg, 25);
+				});
+
+				function moveBg() {
+					pos++;
+					jQuery("#event").css({backgroundPosition: "0 " + (pos * 1) + "px"});
+					jQuery("#sponsors").css({backgroundPosition: "" + (pos * .5) + "px 0px"});
+					jQuery("#circuits").css({backgroundPosition: "" + (pos * -.5) + "px 0px"});
+				}
+			});
+		</script>
+		
+		<script src="js/libs/gumby.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+	</body>
+</html>

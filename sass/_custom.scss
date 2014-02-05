@@ -1,0 +1,619 @@
+// Your custom SCSS should be written here...
+
+@mixin vendor-prefix($name, $argument) {
+  #{$name}: $argument;
+  -webkit-#{$name}: $argument;
+  -ms-#{$name}: $argument;
+  -moz-#{$name}: $argument;
+  -o-#{$name}: $argument;
+}
+
+$red:rgb(49, 49, 49);
+$redbg:$red;
+$yellow:#e7cb4c;
+$turquoise:$yellow;
+$blue:$red;
+
+body {
+	background:url(../images/background.png) center top;
+	line-height:32px;
+}
+
+b {
+	font-weight:bold;
+}
+
+.columns {
+	position:relative;
+}
+
+.sticky-wrapper {
+	
+}
+
+.btn > a, .btn input, .btn button, .skiplink > a, .skiplink input, .skiplink button {
+	color:$yellow;
+}
+
+#navigation {
+	width:100%;
+	height:60px;
+	background:$redbg;
+	position:relative;
+	top:-64px;
+	z-index:-1;
+	opacity:0;
+	@include vendor-prefix(transition, top .2s ease);
+	.columns {
+		margin:0;
+	}
+	a.toggle {
+		background:none;
+		width:60px;
+		height:60px;
+		line-height:58px;
+		top:0;
+		right:0;
+		z-index:1;
+		color:$yellow;
+		&:hover {
+			background:darken($red, 12%);
+		}
+	}
+	&.stuck {
+		position:fixed;
+		display:block;
+		top:0;
+		left:0;
+		right:0;
+		margin-top:0;
+		opacity:1;
+		z-index:9;
+	}
+	ul {
+		float:right;
+		&.active {
+			background:lighten($red, 16%);
+			@include vendor-prefix(box-shadow, none);
+			top:-10px;
+			li {
+				margin:0;
+				a {
+					&:hover {
+						@media screen and (max-width: 799px) {
+							text-decoration:none;
+							background:lighten($red, 10%);
+						}
+					}
+				}
+			}
+		}
+		li {
+			line-height:60px;
+			padding:0;
+			margin-left:16px;
+			&:hover {
+				background:none !important;
+			}
+			a {
+				color:$yellow;
+				font-family:'Oswald', sans-serif;
+				@include vendor-prefix(text-shadow, none);
+				&:hover {
+					text-decoration:underline;
+					background:none;
+				}
+			}
+		}
+	}
+}
+
+header {
+	position:relative;
+	> .row {
+		background:url(../images/triangles.png) 53px 92px no-repeat;
+		height:600px;
+		position:relative;
+		@media screen and (max-width: 1260px) {
+			background:url(../images/triangles.png) center 92px no-repeat;
+		}
+		canvas#canvas {
+			z-index:0;
+			position:absolute;
+			@media screen and (max-width: 1260px) {
+				left:-160px;
+			}
+			@media screen and (max-width: 990px) {
+				display:none;
+			}
+		}
+		p#circle1 {
+			position:absolute;
+			z-index:1;
+			width:160px;
+			height:160px;
+			padding:0;
+			padding-top:38px;
+			margin:0;
+			border-radius:100%;
+			top:260px;
+			left:220px;
+			text-align:center;
+			font-family: 'Nova Flat', sans-serif;
+			color:$yellow;
+			font-size:24px;
+			text-transform:uppercase;
+			//background:$redbg;
+			@media screen and (max-width: 1260px) {
+				margin-left:-160px;
+			}
+			
+			@media screen and (max-width: 990px) {
+				br { display:none; }
+				width:100%;
+				height:auto;
+				margin:16px auto;
+				margin-top:-16px;
+				padding:8px 12px;
+				position:static;
+				top:-24px;
+				left:auto;
+				color:$red;
+				font-size:32px;
+				font-weight:bold;
+				border-radius:0;
+			}
+			@media screen and (max-width: 360px) {
+				font-size:28px;
+				padding:0;
+			}
+			@media only screen and (max-width: 320px) {
+				font-size:22px;
+			}
+		}
+		p#circle2 {
+			position:absolute;
+			z-index:1;
+			width:220px;
+			height:220px;
+			margin:0;
+			padding:0;
+			padding-top:70px;
+			border-radius:100%;
+			top:96px;
+			left:664px;
+			text-align:center;
+			font-family: 'Nova Flat', sans-serif;
+			color:$yellow;
+			font-size:26px;
+			text-transform:uppercase;
+			//background:$redbg;
+			@media screen and (max-width: 1260px) {
+				margin-left:-160px;
+			}
+			@media screen and (max-width: 990px) {
+				br { display:none; }
+				width:100%;
+				height:auto;
+				margin:16px auto;
+				padding-top:0;
+				padding:8px 12px;
+				position:static;
+				top:auto;
+				left:auto;
+				color:$red;
+				font-size:32px;
+				font-weight:bold;
+				border-radius:0;
+			}
+			@media screen and (max-width: 360px) {
+				font-size:28px;
+				padding:0;
+			}
+			@media only screen and (max-width: 320px) {
+				font-size:22px;
+			}
+		}
+		p#circle3 {
+			position:absolute;
+			z-index:1;
+			width:120px;
+			height:120px;
+			margin:0;
+			padding:0;
+			padding-top:24px;
+			border-radius:100%;
+			top:440px;
+			left:910px;
+			text-align:center;
+			font-family: 'Nova Flat', sans-serif;
+			color:$yellow;
+			font-size:22px;
+			text-transform:uppercase;
+			//background:$redbg;
+			@media screen and (max-width: 1260px) {
+				margin-left:-160px;
+			}
+			@media screen and (max-width: 990px) {
+				br { display:none; }
+				width:100%;
+				height:auto;
+				margin:16px auto;
+				padding-top:0;
+				padding:8px 12px;
+				position:static;
+				top:auto;
+				left:auto;
+				color:$red;
+				font-size:32px;
+				font-weight:bold;
+				border-radius:0;
+			}
+			@media screen and (max-width: 360px) {
+				font-size:28px;
+				padding:0;
+			}
+			@media only screen and (max-width: 320px) {
+				font-size:22px;
+			}
+		}
+	}
+}
+
+p { 
+	&#logo {
+		background:$redbg;
+		width:160px;
+		height:160px;
+		margin-bottom:0;
+		position:relative;
+		img {
+			padding:30px;
+		}
+	}
+	&#cohost {
+		width:160px;
+		height:160px;
+		text-align:center;
+		position:absolute;
+		left:160px;
+		top:0;
+		@media only screen and (max-width: 360px) {
+			-moz-transform: scale(.75);
+			-moz-transform-origin: 0 0;
+			-o-transform: scale(.75);
+			-o-transform-origin: 0 0;
+			-webkit-transform: scale(.75);
+			-webkit-transform-origin:0 0;
+			height:75%;
+		}
+		span {
+			color:$red;
+			font-weight:bold;
+			font-size:12px;
+		}
+		img {
+			margin-top:4px;
+			opacity:0.5;
+			@include vendor-prefix(transition, opacity .2s ease);
+			&:hover{
+				opacity:1;
+			}
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:'Oswald', sans-serif;
+	font-weight:normal;
+	color:$blue;
+	margin-bottom:24px;
+	&#site-title {
+		color:$red;
+		padding:0;
+		font-size:36px;
+		position:relative;
+		margin:0;
+	}
+	&#shuffling {
+		color:$red;
+		font-size:36px;
+		padding-top:152px;
+		margin:0;
+		@media only screen and (max-width: 320px) {
+			padding-top:120px;
+		}
+	}
+	&#register {
+		position:absolute;
+		right:0;
+		top:32px;
+		color:$red;
+		font-size:60px;
+		@media screen and (max-width: 360px) {
+			top:auto;
+			bottom:-160px;
+			right:auto;
+			width:100%;
+			.btn {
+				width:100%;
+				display:block;
+			}
+		}
+	}
+}
+h4 {
+	margin:0;
+}
+
+table {
+	thead {
+		background:$blue;
+		th {
+			padding:8px;
+			font-size:14px !important;
+		}
+	}
+	tr {
+		td {
+			font-size:12px !important;
+			padding:4px 12px;
+			&.during {
+				background:$turquoise;
+				width:60px;
+			}
+		}
+	}
+}
+
+section {
+	display:block;
+	padding:48px 0;
+	&#footer {
+		padding:8px 0;
+		font-size:12px;
+		color:#FFF;
+		text-shadow:0 1px 1px #313131;
+		text-align:center;
+		margin-top:-20px;
+	}
+	&#text-rotator {
+		background:url(../images/text-rotator.png) repeat-x;
+		height:331px;
+		text-align:center;
+		position:relative;
+	}
+	&#event {
+		background:url(../images/faces.jpg);
+		padding-bottom:49px;
+		ul.gallery {
+		margin-top:12px;
+			li {
+				text-align:center;
+				img {
+					border:8px solid #FFF;
+				}
+			}
+		}
+	}
+	&#overview {
+		//background:url(../images/circuits.png);
+		color:#FFF;
+		text-shadow:0 1px 1px #313131;
+		h2 {
+			color:#FFF;
+		}
+		h5 {
+			color:$yellow;
+			margin-bottom:0;
+		}
+		.q {
+			background:rgba(49, 49, 49, .5);
+			padding:16px 22px;
+			margin-bottom:24px;
+		}
+	}
+	&#schedule {
+		background:#FFF;
+		.respond {
+			width:960px;
+			margin:auto;
+			font-size:12px;
+			@media screen and (max-width: 1008px) {
+				width:640px;
+				margin:auto;
+			}
+			@media screen and (max-width: 720px) {
+				width:400px;
+			}
+			span {
+				height:40px;
+				line-height:40px;
+				@media screen and (max-width: 1008px) {
+					display:none;
+				}
+			}
+			.event {
+				width:160px;
+				padding-left:6px;
+				float:left;
+				font-weight:bold;
+				border-right:1px solid #DDD;
+				@media screen and (max-width: 1008px) {
+					display:block;
+				}
+			}
+			.time {
+				width:40px;
+				border-right:1px solid #DDD;
+				float:left;
+				text-align:center;
+			}
+			.slot {
+				position:relative;
+				clear:both;
+				height:40px;
+				margin-top:1px;
+				&:nth-child(odd) span {
+					background:#EEE;
+				}
+			}
+			.during {
+				position:absolute;
+				background:$turquoise !important;
+				@media screen and (max-width: 1008px) {
+					display:block;
+					position:static;
+					float:left;
+					width:480px;
+					color:#FFF;
+				}
+				@media screen and (max-width: 720px) {
+					width:240px;
+				}
+			}
+		}
+	}
+	&#location {
+		background:url(../images/perdue.jpg) center no-repeat;
+		background-size:cover;
+		padding-top:0;
+		article {
+			margin-top:-96px;
+		}
+		iframe {
+			opacity:0.66;
+			@include vendor-prefix(transition, opacity .2s ease);
+			&:hover {
+				opacity:1;
+			}
+		}
+	}
+	&#sponsors {
+		background-color:#DDD;
+		background-image:url(../images/old/background.png);
+		position:relative;
+		padding-bottom:0;
+		#circuits {
+			position:absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			background:url(../images/circuits.png) scroll 0 0;
+		}
+		h4 {
+			margin:40px 0 12px;
+		}
+		.row {
+			margin-bottom:24px;
+			text-align:center;
+		}
+		img {
+			padding:0 24px;
+			vertical-align:middle;
+			&#fyrware {
+			padding:24px 0 0 24px;
+			}
+			&#google {
+				padding:12px 48px;
+			}
+			&#ng {
+				padding-top:48px;
+			}
+			&#ge {
+				padding:24px 160px 0 40px;
+			}
+			&#cisco {
+				position:relative;
+				left:64px;
+			}
+			&#msoft {
+				padding-top:24px;
+			}
+			&#statefarm {
+				position:relative;
+				top:12px;
+			}
+			&#walmart {
+				position:relative;
+				top:-24px;
+			}
+			@media screen and (max-width: 799px) {
+				padding:24px !important;
+				top:0 !important;
+				left:0 !important;
+			}
+		}
+	}
+}
+
+iframe {
+	border:8px solid #FFF;
+}
+
+#map {
+    position: relative;
+    height:480px;
+}
+
+#map {
+	iframe, object, embed {
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:480px;
+	}
+}
+
+.white-fade {
+	height:143px;
+	//background:url(../images/white-fade.png) top repeat-x;
+}
+
+.primary.btn {
+	background:$redbg;
+	color:$yellow;
+	border:none;
+	font-family:'Oswald', sans-serif;
+	font-weight:normal;
+	@include vendor-prefix(transition, all .2s ease);
+	&:hover {
+		background:$redbg;
+		@include vendor-prefix(transform, rotate(4deg));
+	}
+}
+
+.drawer {
+	background:none;
+	@include vendor-prefix(box-shadow, none);
+	margin-bottom:24px;
+}
+
+.marginTop {
+	margin-top:48px;
+	&.row {
+		margin-top:80px;
+		@media screen and (max-width: 799px) {
+			margin-top:0;
+		}
+	}
+}
+
+.clear {
+	clear:both;
+}
+
+.tcenter {
+	text-align:center;
+	padding:24px;
+}
+
+.tleft {
+	text-align:left;
+}
+
+.respond {
+	position:relative;
+}
