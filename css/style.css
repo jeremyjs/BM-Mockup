@@ -1,0 +1,12 @@
+.fri {
+  background: rgba(0, 0, 0, .2);
+}
+.sat {
+  background: rgba(0, 0, 0, .3);
+}
+.sun {
+  background: rgba(0, 0, 0, .2);
+}
+.bolder {
+  color: rgb(40, 40, 40);
+}
