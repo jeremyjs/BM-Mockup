@@ -1,3 +1,18 @@
 .bolder {
   color: rgb(40, 40, 40);
 }
+.minihack {
+  color: #e7cb4c;
+  margin-bottom: 0px;
+}
+.company {
+  margin-bottom: 12px;
+}
+.text {
+  color: #fff;
+}
+.panel {
+  margin-top: 20px;
+  background: rgba(49, 49, 49, 0.5);
+  padding: 16px 22px;
+}
